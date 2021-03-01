@@ -101,8 +101,22 @@ AddEventHandler('kashactersC:SpawnCharacter', function(spawn, isnew)
     TriggerEvent('esx_ambulancejob:multicharacter', source)
     if isnew == true then
         TriggerEvent('esx_identity:showRegisterIdentity')
+    else
+        Citizen.Wait(1000)
+        ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
+            local isMale = skin.sex == 0
+
+            TriggerEvent('skinchanger:loadDefaultModel', isMale, function()
+                ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin)
+                    TriggerEvent('skinchanger:loadSkin', skin)
+                    TriggerEvent('esx:restoreLoadout')
+                end)
+            end)
+
+        end)
     end
 end)
+
 
 RegisterNetEvent('kashactersC:ReloadCharacters')
 AddEventHandler('kashactersC:ReloadCharacters', function()
