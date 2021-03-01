@@ -1,6 +1,6 @@
 ## SQL Injection fix from [KASHZIN/kashacters/pull/36](https://github.com/KASHZIN/kashacters/pull/36) is applied to this fork!
 
-## Skin not loading in fix from [FiveEYZ/esx_kashacter/pull/28/](https://github.com/FiveEYZ/esx_kashacter/pull/28)
+## Skin not loading in fix from [FiveEYZ/esx_kashacter/pull/28/](https://github.com/FiveEYZ/esx_kashacter/pull/28) is applied to this fork as well
 
 # Thanks to KASH and XxFri3ndlyxX
 ### If you are updating ESX, be sure to update the remaining scripts!
